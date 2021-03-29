@@ -1,5 +1,5 @@
-const prevBtn = document.queryCommandEnabled('.prev');
-const nextBtn = document.queryCommandEnabled('.next');
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
 const galleryImgs = document.querySelectorAll('.gallery-img');
 let currentlySelected = 0;
 
@@ -17,7 +17,7 @@ netxBtn.addEventListener('click', function(){
     galleryImgs[currentlySelected].classList.add('active');
     prevBtn.disabled = false;
 
-    if(galleryImgs.length ===currentlySelected + 1){
+    if(galleryImgs.length === currentlySelected + 1){
         nextBtn.disabled = true;
     }
 
